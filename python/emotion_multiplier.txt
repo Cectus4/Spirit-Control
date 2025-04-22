@@ -1,0 +1,7 @@
+anger:500
+disgust:1
+enthusiasm:1
+fear:0.01
+happiness:1
+neutral:1000
+sadness:1

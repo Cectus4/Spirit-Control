@@ -1,5 +1,8 @@
 import os
 from aniemoresimple import vr, emotions_percent, to_string
+import warnings
+
+warnings.filterwarnings("ignore")
 
 vr = vr()
 

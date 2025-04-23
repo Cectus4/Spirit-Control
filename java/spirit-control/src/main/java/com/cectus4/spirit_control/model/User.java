@@ -1,4 +1,4 @@
-package com.cectus4.spirit_control;
+package com.cectus4.spirit_control.model;
 
 import lombok.Builder;
 import lombok.Data;
@@ -10,6 +10,6 @@ public class User {
     private String name;
     private int age;
     private Boolean gender;
-    private String mail;
+    private String email;
 
 }

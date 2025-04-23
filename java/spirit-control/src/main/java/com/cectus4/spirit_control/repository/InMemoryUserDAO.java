@@ -1,12 +1,13 @@
 package com.cectus4.spirit_control.repository;
 
 import com.cectus4.spirit_control.model.User;
-import lombok.var;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
 
+@Repository
 public class InMemoryUserDAO {
 
     private final List<User> USERS = new ArrayList<User>();
@@ -32,5 +33,8 @@ public class InMemoryUserDAO {
 
     public void deleteUser(String email) {
         var user = findUserByEmail(email);
+        if(user!=null){
+            USERS.remove(user);
+        }
     }
 }

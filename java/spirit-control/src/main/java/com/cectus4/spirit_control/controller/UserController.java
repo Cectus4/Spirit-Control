@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/spirit")
 @AllArgsConstructor
-public class SpiritController {
+public class UserController {
 
     private final UserService spiritService;
 

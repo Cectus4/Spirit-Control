@@ -1,0 +1,7 @@
+anger:255, 0, 0
+disgust:0, 128, 0
+enthusiasm:48, 213, 200
+fear:139, 0, 255
+happiness:255, 255, 0
+neutral:0, 0, 0
+sadness:0, 0, 255

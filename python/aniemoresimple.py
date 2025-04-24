@@ -5,12 +5,13 @@ from aniemore.models import HuggingFaceModel
 
 class vr:
 
-    def __init__(self, emo_multi_path="python/emotion_multiplier.txt"):
+    def __init__(self, emo_multi_path="python/emotion_multiplier.txt", emo_colors_path="python/emotion_colors.txt"):
         
         model = HuggingFaceModel.Voice.WavLM
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.voiceRecognizer = VoiceRecognizer(model=model, device=device)
         self.emotion_multipliers = [line.replace("\n", "") for line in open(emo_multi_path)]
+        self.emotion_colors = [line.replace("\n", "") for line in open(emo_colors_path)]
         
 
 
@@ -23,7 +24,14 @@ class vr:
 
         return analysis
 
-
+    '''
+    #todo
+    def color(self, dict):
+        r = (0, 0, 0)
+        for color in self.emotion_colors:
+            r+=(dict[color.split(":")[0]]*float(color.split(":")[1].split(", ")[0]), dict[color.split(":")[0]]*float(color.split(":")[1].split(", ")[1]), dict[color.split(":")[0]]*float(color.split(":")[1].split(", ")[2]))
+        return r
+    '''
 
 def emotions_percent(dict):
     

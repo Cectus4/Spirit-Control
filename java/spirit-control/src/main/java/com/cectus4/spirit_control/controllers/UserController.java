@@ -1,4 +1,4 @@
-package com.cectus4.spirit_control.controller;
+package com.cectus4.spirit_control.controllers;
 
 import com.cectus4.spirit_control.model.User;
 import com.cectus4.spirit_control.service.UserService;

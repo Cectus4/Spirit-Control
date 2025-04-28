@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/spirit")
+@RequestMapping("/api/v1/spirit/user")
 @AllArgsConstructor
 public class UserController {
 
@@ -19,25 +19,35 @@ public class UserController {
         return userService.getUsers();
     }
 
-    @PostMapping("save-user")
+    @PostMapping("save")
     public String saveUser(@RequestBody User user) {
         userService.saveUser(user);
         return "Saved";
     }
 
-    @GetMapping("/{email}")
+    @GetMapping("find-by-email/{email}")
     public User findUserByEmail(@PathVariable String email) {
         return userService.findUserByEmail(email);
     }
 
-    @PutMapping("update-user")
-    public User updateUser(User user) {
+    @GetMapping("find-by-username/{username}")
+    public User findUserByUsername(@PathVariable String username) {
+        return userService.findUserByUsername(username);
+    }
+
+    @GetMapping("find-by-id/{id}")
+    public User findUserById(@PathVariable int id) {
+        return userService.findUserById(id);
+    }
+
+    @PutMapping("update")
+    public User updateUser(@RequestBody User user) {
         return userService.updateUser(user);
     }
 
-    @DeleteMapping("delete-user/{email}")
-    public void deleteUser(@PathVariable String email) {
-        userService.deleteUser(email);
+    @DeleteMapping("delete/{id}")
+    public void deleteUser(@PathVariable long id) {
+        userService.deleteUser(id);
     }
 
 }

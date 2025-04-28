@@ -27,17 +27,27 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User findUserByEmail(String email) {
-        return userRepository.findUserByEmail(email);
-    }
-
-    @Override
     public User updateUser(User user) {
         return userRepository.save(user);
     }
 
     @Override
-    public void deleteUser(String email) {
-        userRepository.deleteByEmail(email);
+    public void deleteUser(long id) {
+        userRepository.deleteById(id);
+    }
+
+    @Override
+    public User findUserByEmail(String email) {
+        return userRepository.findUserByEmail(email);
+    }
+
+    @Override
+    public User findUserByUsername(String username) {
+        return userRepository.findUserByUsername(username);
+    }
+
+    @Override
+    public User findUserById(long id) {
+        return userRepository.findUserById(id);
     }
 }

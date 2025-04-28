@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "e9c13c4d-8010-47d4-8303-bd61a7bd3af0",
+		"name": "Spirit/EmoStatistics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40277421"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/v1/spirit/user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/spirit/emo-statistics",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"spirit",
+						"emo-statistics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/spirit/emo-statistics/save",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":{{$randomInt}},\r\n    \"emoDict\":\"{{$randomWord}}\",\r\n    \"date\":\"1973-03-31\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/spirit/emo-statistics/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"spirit",
+						"emo-statistics",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/spirit/emo-statistics/find-by-user-id/200",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/spirit/emo-statistics/find-by-user-id/200",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"spirit",
+						"emo-statistics",
+						"find-by-user-id",
+						"200"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/spirit/emo-statistics/find-by-id/53",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/spirit/emo-statistics/find-by-id/53",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"spirit",
+						"emo-statistics",
+						"find-by-id",
+						"53"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

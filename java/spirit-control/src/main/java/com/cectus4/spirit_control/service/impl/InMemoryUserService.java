@@ -24,18 +24,28 @@ public class InMemoryUserService implements UserService {
     }
 
     @Override
-    public User findUserByEmail(String email) {
-        return userDAO.findUserByEmail(email);
-    }
-
-    @Override
     public User updateUser(User user) {
         return userDAO.updateUser(user);
     }
 
     @Override
-    public void deleteUser(String email) {
-        userDAO.deleteUser(email);
+    public void deleteUser(long id) {
+        userDAO.deleteUser(id);
+    }
+
+    @Override
+    public User findUserByEmail(String email) {
+        return userDAO.findUserByEmail(email);
+    }
+
+    @Override
+    public User findUserByUsername(String username) {
+        return userDAO.findUserByUsername(username);
+    }
+
+    @Override
+    public User findUserById(long id) {
+        return userDAO.findUserById(id);
     }
 
 }

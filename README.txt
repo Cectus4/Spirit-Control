@@ -6,4 +6,3 @@
     url: jdbc:postgresql://localhost:5432/spirit_control_db
     username: postgres
     password: 147896313
-    table: users

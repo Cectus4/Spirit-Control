@@ -3,7 +3,7 @@ from aniemore.recognizers.voice import VoiceRecognizer
 from aniemore.models import HuggingFaceModel
 import speech_recognition as sr
 from transformers import pipeline
-
+from config import *
 
 class TextAnalysis:
 
@@ -50,13 +50,12 @@ class TextAnalysis:
 
 class VoiceAnalysis:
 
-    def __init__(self, emo_multi_path="emotion_multiplier.txt", emo_colors_path="emotion_colors.txt"):
+    def __init__(self, emo_multi_path=ANIEMORE_EMO_MULTI_PATH):
         
         model = HuggingFaceModel.Voice.WavLM
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.voiceRecognizer = VoiceRecognizer(model=model, device=device)
         self.emotion_multipliers = [line.replace("\n", "") for line in open(emo_multi_path)]
-        self.emotion_colors = [line.replace("\n", "") for line in open(emo_colors_path)]
 
 
     def analyze(self, file_name):

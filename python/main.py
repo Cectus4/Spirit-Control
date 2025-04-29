@@ -1,26 +1,31 @@
-import threading
-from fastapi import FastAPI, BackgroundTasks
+from fastapi import FastAPI
 from pydantic import BaseModel
-from datetime import datetime
+from aniemoresimple import vr, to_string
+import requests
+import json
 
 app = FastAPI()
+vr = vr()
 
 class EmoStatistics(BaseModel):
     id: int
     userId: int
     emoDict: str
-    date: datetime
-
-def process_emo_data(emo_data: EmoStatistics):
-    print(f"Обрабатываю данные: {emo_data}")
-
+    date: str
 
 @app.post("/api/v1/spirit/emo-statistics/generate")
 async def generate_stats(emo_data: EmoStatistics):
 
-    thread = threading.Thread(target=process_emo_data, args=(emo_data,), daemon=True)
-    thread.start()
-
+    final_stats = to_string(vr.recognize("tests/{0}{1}.wav".format(emo_data.userId, emo_data.date)))
+    data = {
+        "id": "{0}".format(emo_data.id),
+        "userId": "{0}".format(emo_data.userId),
+        "emoDict": "{0}".format(final_stats),
+        "date": "{0}".format(emo_data.date)
+    }
+    print(data)
+    headers = {'Content-Type': 'application/json'}
+    requests.post("http://localhost:8080/api/v1/spirit/emo-statistics/save", data=json.dumps(data), headers=headers)
     return {"msg": "k"}
 
 #cd python

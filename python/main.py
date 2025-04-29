@@ -29,7 +29,7 @@ async def generate_stats(emo_data: EmoStatistics):
         "date": "{0}".format(emo_data.date)
     }
     
-    headers = {"Content-Type': 'application/json"}
+    headers = {'Content-Type': 'application/json'}
     requests.post("http://localhost:8080/api/v1/spirit/emo-statistics/save", data=json.dumps(data), headers=headers)
     return MESSAGE
 

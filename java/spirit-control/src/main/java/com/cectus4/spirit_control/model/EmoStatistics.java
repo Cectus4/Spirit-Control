@@ -14,7 +14,7 @@ public class EmoStatistics {
     private long id;
     @Column(nullable = false)
     private long userId;
-    @Column(nullable = false)
+    @Column(nullable = false, length = 1024)
     private String emoDict;
     @Column(nullable = false)
     private LocalDate date;

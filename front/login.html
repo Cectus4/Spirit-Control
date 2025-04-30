@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
-<body class="main">
+<body>
     <header class="header">
         <a class="logo" href="#">LOGO</a>
         <nav class="nav">
@@ -33,28 +33,27 @@
                 </div>
             </div>
         </nav>
-    </header> 
-    <h1 class="h1_introduction">КАЛЕНДАРЬ НАСТРОЕНИЯ</h1>
-    <h2 class="h2_introduction">Spirit Control помогает обрести спокойствие и уверенность через мониторинг вашего состояния</h2>
-    <section id="info" class="section">
-        <img src="/front/Group.png" class="img_info" width="468.0675" height="485,1225">
-        <h3 class="h3_introduction">Spirit Control - сайт, позволяющий отслеживать динамику настроения с помощью анализа вашего голоса. Мы также предлагаем вам попробовать справиться с тревожностью с помощью ASMR-контента</h3>
-    </section>
-    <section id="asmr" class="section">
-        <iframe class="video" width="700" height="393,75" src="https://www.youtube.com/embed/hiSvTQM3K1E?si=8mQmo5B7JiQOo9CG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <div class="asmr_section">
-            <h4 class="h4_introduction">ASMR</h4>
-            <h5 class="h5_introduction">- расслабьтесь с помощью видео, которое мы предложили вам именно сегодня</h5>
-        </div>
-    </section>
-    <section id="aboutus" class="section">
-        <h6 class="h6_introduction">Проект выполнили ученики 11 "Т" класса ГБОУ "Школа 1561" Михаил Смыслов, Максим Лебедев и Кауфман Нелли</h6>
-        <h6 class="h6_introduction">Отдельно выражаем слова благодарности авторам проекта Aniemore: Lubenets, Ilya and Davidchuk, Nikita and Amentes, Artem</h6>
-    </section>
+    </header>
+    <center><div class="container_login">
+        <label class="container_login_label" for="nickname">Введите имя:</label>
+        <input class="container_login_item" type="text" id="nickname">
+        <label class="container_login_label" for="age">Выберите пол:</label>
+            <select class="container_login_item" name="age_select" id="age">
+            <option class="container_login_item" value="">--Выберите пол--</option>
+            <option class="container_login_item" value="male">мужской</option>
+            <option class="container_login_item" value="female">женский</option>
+            </select>
+        <label class="container_login_label" for="nickname">Дата рождения:</label>
+        <input class="container_login_item" type="date" id="date">
+        <label class="container_login_label" for="email">Введите почту:</label>
+        <input class="container_login_item" type="email" id="email">
+        <label class="container_login_label" for="password">Придумайте пароль:</label>
+        <input class="container_login_item" type="password" id="password">
+        <input class="container_login_submit" type="submit">
+    </div></center>
     <footer class="footer">
         <div class="footer_content">
             <p class="copyright">© 2025 Spirit Control</p>
         </div>
     </footer>
 </body>
-</html>

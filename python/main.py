@@ -11,6 +11,7 @@ class EmoStatistics(BaseModel):
     emoDict: str
     date: str
 
+
 app = FastAPI()
 textAnalysis = TextAnalysis()
 voiceAnalysis = VoiceAnalysis()

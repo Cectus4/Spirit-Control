@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spirit Control</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/front/static/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -20,12 +20,24 @@
             <a href="#asmr" class="nav_link">асмр</a>
             <a href="#aboutus" class="nav_link">о нас</a>
             <a href="#" class="record_link">запись</a>
+            <!--<a href="#" class="nav_link_login">вход</a>!-->
+            <div class="account-dropdown">
+                <input type="checkbox" id="account-toggle" class="dropdown-toggle">
+                <label for="account-toggle" class="nav_link_login_pic">
+                    <img src="https://s.iimg.su/s/30/kWYe93D8RxWXXkyIBq0ck3YpSB5anHFMdayY9D0R.png" width="46.5" height="43.7" alt="Аккаунт">
+                </label>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">профиль</a>
+                    <a href="#" class="dropdown-item">настройки</a>
+                    <a href="#" class="dropdown-item">выйти</a>
+                </div>
+            </div>
         </nav>
     </header> 
     <h1 class="h1_introduction">КАЛЕНДАРЬ НАСТРОЕНИЯ</h1>
     <h2 class="h2_introduction">Spirit Control помогает обрести спокойствие и уверенность через мониторинг вашего состояния</h2>
     <section id="info" class="section">
-        <img src="/Group.png" class="img_info" width="468.0675" height="485,1225">
+        <img src="/front/Group.png" class="img_info" width="468.0675" height="485,1225">
         <h3 class="h3_introduction">Spirit Control - сайт, позволяющий отслеживать динамику настроения с помощью анализа вашего голоса. Мы также предлагаем вам попробовать справиться с тревожностью с помощью ASMR-контента</h3>
     </section>
     <section id="asmr" class="section">
@@ -36,11 +48,11 @@
         </div>
     </section>
     <section id="aboutus" class="section">
-        <a class="a_introduction">Проект выполнили ученики 11 "Т" класса ГБОУ "Школа 1561" Михаил Смыслов, Максим Лебедев и Кауфман Нелли</a>
-        <a class="a_introduction">Отдельно выражаем слова благодарности авторам проекта Aniemore: Lubenets, Ilya and Davidchuk, Nikita and Amentes, Artem</a>
+        <h6 class="h6_introduction">Проект выполнили ученики 11 "Т" класса ГБОУ "Школа 1561" Михаил Смыслов, Максим Лебедев и Кауфман Нелли</h6>
+        <h6 class="h6_introduction">Отдельно выражаем слова благодарности авторам проекта Aniemore: Lubenets, Ilya and Davidchuk, Nikita and Amentes, Artem</h6>
     </section>
     <footer class="footer">
-        <div class="footer-content">
+        <div class="footer_content">
             <p class="copyright">© 2025 Spirit Control</p>
         </div>
     </footer>

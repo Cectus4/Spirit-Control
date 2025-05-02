@@ -10,7 +10,7 @@ body {
     min-height: 3000px;
 }
 
-a, label {
+a, label, legend {
     text-decoration: none;
     transition: all 0.5s;
     color: #f3effb;
@@ -314,33 +314,14 @@ footer {
     transform: scale(1.05);
 }
 
-.container_login {
-    background-color: rgb(41, 40, 40);
-    border-radius: 30px;
-    width: 800px;
-    height: 450px;
-    margin-top: 160px;
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-    gap: 20px;
-}
-
-.container_login_label {
-    max-width: max-content;
-    font-family: "Comfortaa", sans-serif;
-}
-
 
 .container_login_item {
-    max-width: max-content;
     font-family: "Comfortaa", sans-serif;
     background-color: rgba(0, 0, 0, 0.075);
     font-size: 90%;
+    border: 0;
     cursor: pointer;
-    border: solid;
     border-radius: 7px;
-    border-color: rgb(100, 107, 99);
     color: white;
     text-align: center;
     transition: all 0.5s;
@@ -364,4 +345,35 @@ footer {
     box-shadow: 0px 0px 30px 1px
     rgba(0, 255, 119, 0.445);
     border-color: rgb(52, 189, 25);
+}
+
+form {
+    border: 3px solid rgb(100, 107, 99);
+    max-width: fit-content;
+    margin-left: 40%;
+    margin-top: 10%;
+    padding: 50px 70px 50px 70px;
+    gap: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border: 0;
+    background-color: transparent;
+}
+
+input:focus {
+    outline: 0;
+}
+
+fieldset {
+    padding: 0;
+    border: 3px solid rgb(100, 107, 99);
+    border-radius: 7px;
+    transition: all 0.5s;
+}
+
+legend {
+    padding-inline: 0.5em;
 }

@@ -34,23 +34,34 @@
             </div>
         </nav>
     </header>
-    <center><div class="container_login">
-        <label class="container_login_label" for="nickname">Введите имя:</label>
-        <input class="container_login_item" type="text" id="nickname">
-        <label class="container_login_label" for="age">Выберите пол:</label>
+    <form>
+        <fieldset>
+            <legend>Введите имя</legend>
+            <input type="text">
+        </fieldset>
+        <fieldset>
+            <legend>Выберите пол</legend>
             <select class="container_login_item" name="age_select" id="age">
-            <option class="container_login_item" value="">--Выберите пол--</option>
-            <option class="container_login_item" value="male">мужской</option>
-            <option class="container_login_item" value="female">женский</option>
-            </select>
-        <label class="container_login_label" for="nickname">Дата рождения:</label>
-        <input class="container_login_item" type="date" id="date">
-        <label class="container_login_label" for="email">Введите почту:</label>
-        <input class="container_login_item" type="email" id="email">
-        <label class="container_login_label" for="password">Придумайте пароль:</label>
-        <input class="container_login_item" type="password" id="password">
-        <input class="container_login_submit" type="submit">
-    </div></center>
+                <option value="">--</option>
+                <option value="male">мужской</option>
+                <option value="female">женский</option>
+                <option value="female">другой</option>
+                </select>
+        </fieldset>
+        <fieldset>
+            <legend>Дата рождения</legend>
+            <input type="date">
+        </fieldset>
+        <fieldset>
+            <legend>Введите почту</legend>
+            <input type="email">
+        </fieldset>
+        <fieldset>
+            <legend>Придумайте пароль</legend>
+            <input type="password">
+        </fieldset>
+        <input type="submit" class="container_login_submit">
+    </form>
     <footer class="footer">
         <div class="footer_content">
             <p class="copyright">© 2025 Spirit Control</p>

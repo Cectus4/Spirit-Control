@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Table(name = "\"emostatistics\"")
 public class EmoStatistics {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue()
     private long id;
     @Column(nullable = false)
     private long userId;

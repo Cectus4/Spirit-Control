@@ -36,3 +36,4 @@ async def generate_stats(emo_data: EmoStatistics):
 
 #cd python
 #uvicorn main:app --reload
+#python -m uvicorn main:app --reload  

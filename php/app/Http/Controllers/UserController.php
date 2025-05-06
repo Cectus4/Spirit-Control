@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Cache;
 use Hash;
 use Http;
+use Illuminate\Support\Facades\Redirect;
+use Log;
 class UserController extends Controller
 {
     public function register(Request $request)
@@ -18,7 +20,7 @@ class UserController extends Controller
             'gender' => 'bail|required|filled',
         ]);
         
-        
+        Log::info($data);
         $user = [
             'name' => $data['name'],
             'email' => $data['email'],
@@ -38,6 +40,7 @@ class UserController extends Controller
             ]        
             );
 
-        return response('Register went fine', 200);
+
+        return Redirect::to('/');
     }
 }

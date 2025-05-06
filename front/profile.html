@@ -16,10 +16,10 @@
     <header class="header">
         <a class="logo" href="#">LOGO</a>
         <nav class="nav">
-            <a href="#" class="nav_link">инфо</a>
-            <a href="#asmr" class="nav_link">асмр</a>
-            <a href="#aboutus" class="nav_link">о нас</a>
-            <a href="#" class="record_link">запись</a>
+            <a href="index.html#" class="nav_link">инфо</a>
+            <a href="index.html#asmr" class="nav_link">асмр</a>
+            <a href="index.html#aboutus" class="nav_link">о нас</a>
+            <a href="index.html#" class="record_link">запись</a>
             <!--<a href="#" class="nav_link_login">вход</a>!-->
             <div class="account-dropdown">
                 <input type="checkbox" id="account-toggle" class="dropdown-toggle">
@@ -34,34 +34,36 @@
             </div>
         </nav>
     </header>
-    <form class="form-reg">
-        <fieldset>
-            <legend>Введите имя</legend>
-            <input type="text">
-        </fieldset>
-        <fieldset>
-            <legend>Выберите пол</legend>
-            <select class="container_login_item" name="age_select" id="age">
-                <option value="">--</option>
-                <option value="male">мужской</option>
-                <option value="female">женский</option>
-                <option value="female">другой</option>
-                </select>
-        </fieldset>
-        <fieldset>
-            <legend>Дата рождения</legend>
-            <input type="date">
-        </fieldset>
-        <fieldset>
-            <legend>Введите почту</legend>
-            <input type="email">
-        </fieldset>
-        <fieldset>
-            <legend>Придумайте пароль</legend>
-            <input type="password">
-        </fieldset>
-        <input type="submit" class="container_login_submit">
-    </form>
+    <div class="container-profile">
+        <form class="form-profile">
+            <fieldset>
+                <legend>Введите имя</legend>
+                <input type="text">
+            </fieldset>
+            <fieldset>
+                <legend>Выберите пол</legend>
+                <select class="container_login_item" name="age_select" id="age">
+                    <option value="">--</option>
+                    <option value="male">мужской</option>
+                    <option value="female">женский</option>
+                    <option value="female">другой</option>
+                    </select>
+            </fieldset>
+            <fieldset>
+                <legend>Дата рождения</legend>
+                <input type="date">
+            </fieldset>
+            <fieldset>
+                <legend>Введите почту</legend>
+                <input type="email">
+            </fieldset>
+            <input type="submit" class="container_login_submit" value="Сохранить">
+        </form>
+        <div class="pic-container">
+            <img src="/nya.jpg" width="400px" height="400px">
+            <input type="file" class="prof-file" accept="image/*">
+        </div>
+    </div>
     <footer class="footer">
         <div class="footer_content">
             <p class="copyright">© 2025 Spirit Control</p>

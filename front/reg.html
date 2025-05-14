@@ -36,11 +36,28 @@
     </header>
     <form class="form-reg">
         <fieldset>
+            <legend>Введите имя</legend>
+            <input type="text">
+        </fieldset>
+        <fieldset>
+            <legend>Выберите пол</legend>
+            <select class="container_login_item" name="age_select" id="age">
+                <option value="">--</option>
+                <option value="male">мужской</option>
+                <option value="female">женский</option>
+                <option value="female">другой</option>
+                </select>
+        </fieldset>
+        <fieldset>
+            <legend>Дата рождения</legend>
+            <input type="date">
+        </fieldset>
+        <fieldset>
             <legend>Введите почту</legend>
             <input type="email">
         </fieldset>
         <fieldset>
-            <legend>Введите пароль</legend>
+            <legend>Придумайте пароль</legend>
             <input type="password">
         </fieldset>
         <input type="submit" class="container_login_submit">

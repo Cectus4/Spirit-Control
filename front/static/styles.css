@@ -406,3 +406,12 @@ legend {
     text-align: center;
     transition: all 0.5s;
 }
+
+.record-textarea {
+    border: 3px solid rgb(100, 107, 99);
+    border-radius: 7px;
+}
+
+.record-container {
+    display: inline-flex;
+}

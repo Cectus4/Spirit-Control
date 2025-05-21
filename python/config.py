@@ -6,3 +6,4 @@ MESSAGE = {"msg": "k"}
 ANIEMORE_EMO_MULTI_PATH = "emotion_multiplier.txt"
 OGG_2_WAV_INPUT = "python/ogg2wavInput/"
 OGG_2_WAV_OUTPUT = "python/tests/"
+BOT_TOKEN = "7499114365:AAHT1gYbDhR34EYYv7O9kre_w-fyYnMRe2k"

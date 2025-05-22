@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Hash;
 use Http;
+use Log;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -22,35 +23,13 @@ class LoginController extends Controller
     | to conveniently provide its functionality to your applications.
     |
     */
-
-    use AuthenticatesUsers;
-
     /**
      * Where to redirect users after login.
-     *
-     * @var string
-     */
-    protected $redirectTo = RouteServiceProvider::HOME;
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('guest')->except('logout');
-    }
-
-    /**
+     
      * Show the application's login form.
      *
      * @return \Illuminate\View\View
      */
-    public function showLoginForm()
-    {
-        return view('auth.login');
-    }
 
     /**
      * Handle a login request to the application.
@@ -62,6 +41,7 @@ class LoginController extends Controller
      */
     public function login(Request $request)
     {
+        Log::info('Login Attempt');
         $this->validateLogin($request);
 
         // If the class is using the ThrottlesLogins trait, we can automatically throttle
@@ -115,7 +95,7 @@ class LoginController extends Controller
     {
         $validated = $this->validateLogin($request);
 
-        $user = json_decode(Http::get('http://localhost:8080/api/v1/spirit/user/save'));
+        $user = json_decode(Http::get("http://localhost:8080/api/v1/spirit/user/find-by-email/" . $validated['email']));
         return Hash::check($user->password, $validated['password']);
     }
 

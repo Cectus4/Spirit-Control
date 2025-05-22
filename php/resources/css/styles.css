@@ -10,7 +10,7 @@ body {
     min-height: 3000px;
 }
 
-a, label, legend {
+a, label, legend, input {
     text-decoration: none;
     transition: all 0.5s;
     color: #f3effb;
@@ -350,12 +350,15 @@ footer {
 form {
     border: 3px solid rgb(100, 107, 99);
     max-width: fit-content;
-    margin-left: 40%;
-    margin-top: 10%;
     padding: 50px 70px 50px 70px;
     gap: 2em;
     display: flex;
     flex-direction: column;
+}
+
+.form-reg {
+    margin-left: 40%;
+    margin-top: 10%;
 }
 
 input {
@@ -376,4 +379,39 @@ fieldset {
 
 legend {
     padding-inline: 0.5em;
+}
+
+.container-profile {
+    display: inline-flex;
+    margin-left: 10%;
+    margin-top: 7%;
+}
+
+.pic-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 600px;
+}
+
+.prof-file {
+    max-width: 120px;
+    font-family: "Comfortaa", sans-serif;
+    background-color: rgba(0, 0, 0, 0.075);
+    font-size: 90%;
+    cursor: pointer;
+    border: solid;
+    border-radius: 7px;
+    border-color: rgb(100, 107, 99);
+    color: white;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.record-textarea {
+    border: 3px solid rgb(100, 107, 99);
+    border-radius: 7px;
+}
+
+.record-container {
+    display: inline-flex;
 }

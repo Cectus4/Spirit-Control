@@ -327,6 +327,11 @@ footer {
     transition: all 0.5s;
 }
 
+.option:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+    color: white;
+}
+
 .container_login_submit {
     max-width: 120px;
     font-family: "Comfortaa", sans-serif;
@@ -410,8 +415,17 @@ legend {
 .record-textarea {
     border: 3px solid rgb(100, 107, 99);
     border-radius: 7px;
+    background-color: black;
+    color: #f3effb;
 }
 
 .record-container {
     display: inline-flex;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-left: 70%;
 }
